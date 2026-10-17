@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stego Messenger Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Stego Messenger Pro</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Encode Message in Image</h2>
+      <input type="file" id="inputImage" accept="image/*" />
+      <textarea id="message" placeholder="Enter your secret message"></textarea>
+      <input type="password" id="password" placeholder="Optional password" />
+      <button onclick="encodeMessage()">Encode & Download</button>
+      <br /><br />
+      <a id="downloadLink" style="display: none;">Download Encoded Image</a>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Decode Message from Image</h2>
+      <input type="file" id="encodedImage" accept="image/*" />
+      <input type="password" id="decodePassword" placeholder="Enter password if used" />
+      <button onclick="decodeMessage()">Decode Message</button>
+      <p id="extractedMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Stego Messenger Pro</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
